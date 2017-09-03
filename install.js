@@ -3,7 +3,7 @@ var gameId;
 var message;
 var prevText;
 var path = 'alc-notifier.js';
-var alcNotifier = document.createElement('alcNotifier');
+var alcNotifier = document.createElement('script');
 var startInterval = () => {
 	chrome.storage.sync.get('delayMS', ({delayMS}) => {
 		alcNotifier.dispatchEvent(new CustomEvent('alc-interval', {
