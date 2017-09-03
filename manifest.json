@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Alchemists Notifier",
+  "short_name": "Alc Notifier",
+  "version": "1.0.0",
+  "default_locale": "en",
+  "description": "Play Alchemists faster on boiteajeux.net.",
+  "icons": {
+    "16": "alc-16.png",
+    "48": "alc-48.png",
+    "128": "alc-128.png"
+  },
+  "author": "Cody A. Taylor <codemister99@yahoo.com>",
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "background": {
+    "scripts": [
+      "create-notifications.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": {
+    "matches": [
+      "http://www.boiteajeux.net/jeux/alc/partie.php*"
+    ],
+    "run_at": "document_end",
+    "js": [
+      "install.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "alc-notifier.js"
+  ],
+  "permissions": [
+    "notifications",
+    "storage"
+  ]
+}

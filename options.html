@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Alchemists Notifier</title>
+	</head>
+	<body>
+		<label for="delay">Time between forced refresh (ms):</label>
+		<input id="delay" type="number" min="1500" max="20000" step="100">
+
+		<label for="notify-text">Text to display in notification:</label>
+		<input id="notify-text" type="text">
+
+		<hr />
+		<div id="status">&nbsp;</div>
+		<button id="save">Save</button>
+
+		<script type="text/javascript" src="options.js"></script>
+	</body>
+</html>
