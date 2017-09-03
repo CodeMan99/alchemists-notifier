@@ -3,7 +3,6 @@
   "name": "Alchemists Notifier",
   "short_name": "Alc Notifier",
   "version": "1.0.0",
-  "default_locale": "en",
   "description": "Play Alchemists faster on boiteajeux.net.",
   "icons": {
     "16": "alc-16.png",
