@@ -26,12 +26,12 @@ var mutation = new MutationObserver(() => {
 		return;
 	}
 
-	if (prevText == TEXT_ALC_ACTION_ATTENDRE) {
+	if (prevText == TXT_ALC_ACTION_ATTENDRE) {
 		stopInterval();
 		chrome.storage.sync.get('notify-text', ({'notifiy-text': notifyText}) => {
 			chrome.runtime.sendMessage(null, notifyText.replace('%id', gameId));
 		});
-	} else if (text == TEXT_ALC_ACTION_ATTENDRE) {
+	} else if (text == TXT_ALC_ACTION_ATTENDRE) {
 		startInterval();
 	}
 });
