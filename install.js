@@ -60,6 +60,6 @@ alcNotifier.addEventListener('alc-notifier-ready', ready, false);
 alcNotifier.async = true;
 alcNotifier.id = path.replace(/\.js$/, '');
 alcNotifier.src = chrome.extension.getURL(path);
-alcNotifier.type = 'text/javaalcNotifier';
+alcNotifier.type = 'text/javascript';
 
 document.body.appendChild(alcNotifier);
