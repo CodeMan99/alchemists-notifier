@@ -21,15 +21,17 @@
     ],
     "persistent": false
   },
-  "content_scripts": {
-    "matches": [
-      "http://www.boiteajeux.net/jeux/alc/partie.php*"
-    ],
-    "run_at": "document_end",
-    "js": [
-      "install.js"
-    ]
-  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.boiteajeux.net/jeux/alc/partie.php*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "install.js"
+      ]
+    }
+  ],
   "web_accessible_resources": [
     "alc-notifier.js"
   ],
