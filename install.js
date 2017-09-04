@@ -34,6 +34,8 @@ var mutation = new MutationObserver(() => {
 	} else if (text == TXT_ALC_ACTION_ATTENDRE) {
 		startInterval();
 	}
+
+	prevText = text;
 });
 var ready = event => {
 	// listen to this event only once
