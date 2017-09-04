@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Alchemists Notifier",
   "short_name": "Alc Notifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Play Alchemists faster on boiteajeux.net.",
   "icons": {
     "16": "alc-16.png",
