@@ -5,9 +5,9 @@
   "version": "1.0.1",
   "description": "Play Alchemists faster on boiteajeux.net.",
   "icons": {
-    "16": "alc-16.png",
-    "48": "alc-48.png",
-    "128": "alc-128.png"
+    "16": "icons/alc-16.png",
+    "48": "icons/alc-48.png",
+    "128": "icons/alc-128.png"
   },
   "author": "Cody A. Taylor <codemister99@yahoo.com>",
   "options_ui": {
