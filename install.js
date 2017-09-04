@@ -29,7 +29,7 @@ var mutation = new MutationObserver(() => {
 	if (prevText == TXT_ALC_ACTION_ATTENDRE) {
 		stopInterval();
 		chrome.storage.sync.get('notify-text', ({'notify-text': notifyText}) => {
-			chrome.runtime.sendMessage(null, notifyText ? notifyText.replace('%id', gameId) : 'It is your turn (' + gameId + ')');
+			chrome.runtime.sendMessage(null, notifyText ? notifyText.replace(/%id/g, gameId) : 'It is your turn (' + gameId + ')');
 		});
 	} else if (text == TXT_ALC_ACTION_ATTENDRE) {
 		startInterval();
