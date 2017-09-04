@@ -44,6 +44,7 @@ var ready = event => {
 	TXT_ALC_ACTION_ATTENDRE = event.detail['waiting-text'];
 	gameId = event.detail['game-id'];
 	message = document.getElementById('message');
+	if (message == null) return;
 	prevText = message.textContent;
 
 	mutation.observe(message, {
