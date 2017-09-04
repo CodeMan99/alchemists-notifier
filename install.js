@@ -28,7 +28,7 @@ var mutation = new MutationObserver(() => {
 
 	if (prevText == TXT_ALC_ACTION_ATTENDRE) {
 		stopInterval();
-		chrome.storage.sync.get('notify-text', ({'notifiy-text': notifyText}) => {
+		chrome.storage.sync.get('notify-text', ({'notify-text': notifyText}) => {
 			chrome.runtime.sendMessage(null, notifyText.replace('%id', gameId));
 		});
 	} else if (text == TXT_ALC_ACTION_ATTENDRE) {
