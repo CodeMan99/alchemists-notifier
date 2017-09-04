@@ -20,7 +20,7 @@ $(document).ready(() => {
 		clearInterval(interval);
 
 		if (event.detail.action == 'start') {
-			interval = setInterval(reload, event.detail.delayMS || 7000);
+			interval = setInterval(reload, event.detail.delayMS);
 		}
 	});
 
