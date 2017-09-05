@@ -1,6 +1,6 @@
 $(document).ready(() => {
 	if (typeof window.reloadBaj === 'undefined') {
-		console.error('alchemists-boiteajeux: reloadBaj is undefined');
+		console.error('Alchemists Notifier: reloadBaj is undefined, unable to continue');
 		return;
 	}
 
