@@ -6,19 +6,25 @@ var path = 'alc-notifier.js';
 var alcNotifier = document.createElement('script');
 var startInterval = () => {
 	chrome.storage.sync.get('delayMS', ({delayMS}) => {
-		alcNotifier.dispatchEvent(new CustomEvent('alc-interval', {
+		var alcIntervalEvent = new CustomEvent('alc-interval', {
 			detail: {
 				action: 'start',
 				delayMS: delayMS || 7000
 			}
-		}));
+		});
+
+		alcNotifier.dispatchEvent(alcIntervalEvent);
 	});
-}
-var stopInterval = () => alcNotifier.dispatchEvent(new CustomEvent('alc-interval', {
-	detail: {
-		action: 'stop'
-	}
-}));
+};
+var stopInterval = () => {
+	var alcIntervalEvent = new CustomEvent('alc-interval', {
+		detail: {
+			action: 'stop'
+		}
+	});
+
+	alcNotifier.dispatchEvent(alcIntervalEvent);
+};
 var mutation = new MutationObserver(() => {
 	var text = message.textContent;
 
